@@ -38,6 +38,16 @@ body{
   scroll-behavior:smooth;
 }
 
+  /* Hide scrollbar */
+.slider{
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE 10+ */
+}
+.slider::-webkit-scrollbar{
+  display: none;                  /* Chrome / Safari / Edge */
+}
+
+  
 /* Slider arrows */
 .slider-wrapper{
   position:relative;
@@ -235,3 +245,4 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
