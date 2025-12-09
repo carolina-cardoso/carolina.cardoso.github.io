@@ -82,3 +82,178 @@ nav a:hover{ color:var(--accent); }
   grid-template-columns:1fr 1fr; /* half-screen for video, half for text */
   gap:56px;
   align-items:start;
+  margin-top:120px;
+}
+
+/* -------- VIDEO -------- */
+.video{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:14px;
+  overflow:hidden;
+  background:black;
+}
+
+.video iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* -------- TEXT -------- */
+.info h1{
+  font-size:48px;
+  margin:0 0 28px 0;
+  line-height:1.05;
+  font-weight:700;
+}
+
+.info p{
+  color:var(--text);
+  font-size:16px;
+  line-height:1.65;
+  max-width:520px;
+  margin-bottom:14px;
+}
+
+/* -------- NEXT PROJECT -------- */
+.next-project{
+  margin-top:72px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.next-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--next);
+  transition:.18s ease;
+}
+
+.next-link:hover{
+  transform:translateX(6px);
+}
+
+.next-label{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.next-arrow{
+  font-size:34px;
+  line-height:1;
+}
+
+/* -------- MOBILE -------- */
+@media(max-width:900px){
+
+  nav .name{
+    font-size:18px;
+  }
+
+  .project{
+    grid-template-columns:1fr; /* stack video and text on mobile */
+    margin-top:28px;
+    gap:28px;
+  }
+
+  .video{
+    max-width:100%;
+    margin:auto;
+  }
+
+  .info{
+    text-align:center;
+  }
+
+  .info h1{
+    font-size:36px;
+  }
+
+  .next-project{
+    justify-content:center;
+  }
+}
+
+/* -------- FOOTER -------- */
+footer{
+  margin-top:80px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- NAV -->
+<nav>
+  <div class="name">
+    <a href="index.html">Carolina&nbsp;Cardoso</a>
+  </div>
+
+  <ul>
+    <li><a href="index.html">Videos</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- PROJECT -->
+<div class="project">
+
+  <!-- VIDEO -->
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/8Lu08tx5odo?si=4uBqu4-DHVmdSfJw"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+  <!-- TEXT -->
+  <div class="info">
+    <h1>YouTube and Web Video</h1>
+
+    <p>
+      For this project I was responsible for producing and editing horizontal
+      social-first video content tailored for YouTube and other platforms.
+    </p>
+
+    <p>
+      My role included concept development, scripting, filming, editing, and
+      adapting the final piece while maintaining clear storytelling and visual cohesion.
+    </p>
+  </div>
+
+</div>
+
+<!-- PREVIOUS PROJECT -->
+<div class="previous-project">
+  <a class="previous-link" href="project9.html">
+    <div class="previous-arrow">←</div>
+    <div class="previous-label">Previous project</div>
+  </a>
+</div>
+  
+<!-- NEXT PROJECT -->
+<div class="next-project">
+  <a class="next-link" href="project11.html">
+    <div class="next-label">Next project</div>
+    <div class="next-arrow">→</div>
+  </a>
+</div>
+
+<footer>
+Copyright © 2025 Carolina Cardoso. All rights reserved.
+</footer>
+
+</div>
+
+</body>
+</html>
