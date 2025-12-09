@@ -56,9 +56,7 @@ nav .name a{
   color:var(--next);
 }
 
-nav .name a:hover{
-  opacity:.8;
-}
+nav .name a:hover{ opacity:.8; }
 
 nav ul{
   list-style:none;
@@ -76,10 +74,11 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
+
 /* -------- LAYOUT -------- */
 .project{
   display:grid;
-  grid-template-columns:1fr 1fr; /* half-screen for video, half for text */
+  grid-template-columns:1fr 1fr;
   gap:56px;
   align-items:start;
   margin-top:120px;
@@ -116,14 +115,16 @@ nav a:hover{ color:var(--accent); }
   margin-bottom:14px;
 }
 
-/* -------- NEXT PROJECT -------- */
-.next-project{
+
+/* -------- PROJECT NAV -------- */
+.project-nav{
   margin-top:72px;
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.next-link{
+.nav-link{
   display:flex;
   align-items:center;
   gap:12px;
@@ -132,20 +133,25 @@ nav a:hover{ color:var(--accent); }
   transition:.18s ease;
 }
 
-.next-link:hover{
+.nav-link:hover{
   transform:translateX(6px);
 }
 
-.next-label{
+.nav-link.prev:hover{
+  transform:translateX(-6px);
+}
+
+.nav-label{
   font-size:13px;
   text-transform:uppercase;
   letter-spacing:.8px;
 }
 
-.next-arrow{
+.nav-arrow{
   font-size:34px;
   line-height:1;
 }
+
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
@@ -155,7 +161,7 @@ nav a:hover{ color:var(--accent); }
   }
 
   .project{
-    grid-template-columns:1fr; /* stack video and text on mobile */
+    grid-template-columns:1fr;
     margin-top:28px;
     gap:28px;
   }
@@ -173,10 +179,12 @@ nav a:hover{ color:var(--accent); }
     font-size:36px;
   }
 
-  .next-project{
-    justify-content:center;
+  .project-nav{
+    justify-content:space-between;
+    gap:48px;
   }
 }
+
 
 /* -------- FOOTER -------- */
 footer{
@@ -204,18 +212,15 @@ footer{
   </ul>
 </nav>
 
+
 <!-- PROJECT -->
 <div class="project">
 
   <!-- VIDEO -->
   <div class="video">
-    <iframe width="560" height="315" 
-      src="https://www.youtube.com/embed/RjIAuA5vzfQ?si=aZUV4VNF13d_RqZ7" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" 
-      allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/RjIAuA5vzfQ?si=K5Da2xEPbLdjixeh"
+      allowfullscreen>
+    </iframe>
   </div>
 
   <!-- TEXT -->
@@ -235,15 +240,24 @@ footer{
 
 </div>
 
-<!-- PREVIOUS PROJECT -->
-<div class="previous-project">
-  <a class="previous-link" href="project13.html">
-    <div class="previous-arrow">←</div>
-    <div class="previous-label">Previous project</div>
+
+<!-- PROJECT NAV -->
+<div class="project-nav">
+
+  <!-- PREVIOUS -->
+  <a class="nav-link prev" href="project13.html">
+    <div class="nav-arrow">←</div>
+    <div class="nav-label">Previous project</div>
   </a>
+
+  <!-- NEXT -->
+  <a class="nav-link next" href="project1.html">
+    <div class="nav-label">Next project</div>
+    <div class="nav-arrow">→</div>
+  </a>
+
 </div>
-  
-</div>
+
 
 <footer>
 Copyright © 2025 Carolina Cardoso. All rights reserved.
