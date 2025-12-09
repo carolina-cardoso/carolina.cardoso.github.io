@@ -8,19 +8,18 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
 
-<!-- Inter -->
+<!-- Inter Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
-  --bg:#000;
-  --text:#fff;
+  --bg:#000000;
+  --text:#ffffff;
   --muted:#aab2c3;
   --accent:#7dd3fc;
-  --mint:#cfffb6;
+  --next:#cfffb6;
 }
 
 *{ box-sizing:border-box; }
@@ -35,11 +34,10 @@ body{
 .wrapper{
   max-width:1100px;
   margin:auto;
-  padding:60px 20px;
+  padding:60px 20px 60px;
 }
 
 /* ---------- NAV ---------- */
-
 nav{
   display:flex;
   justify-content:space-between;
@@ -50,44 +48,47 @@ nav{
 nav .name{
   font-weight:700;
   font-size:20px;
+  letter-spacing:.4px;
 }
 
 nav .name a{
-  color:var(--mint);
   text-decoration:none;
+  color:var(--next);
+}
+
+nav .name a:hover{
+  opacity:.8;
 }
 
 nav ul{
   list-style:none;
   display:flex;
   gap:20px;
-  margin:2px 0 0;
   padding:0;
+  margin:3px 0 0 0;
 }
 
-nav ul a{
+nav a{
   color:white;
   text-decoration:none;
   font-weight:500;
 }
 
-nav ul a:hover{
-  color:var(--accent);
-}
+nav a:hover{ color:var(--accent); }
 
-/* ---------- PROJECT ---------- */
-
+/* -------- LAYOUT (EXACT MATCH TO PROJECT 1) -------- */
 .project{
-  margin-top:120px;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:380px 1fr;
   gap:56px;
   align-items:start;
+  margin-top:120px;
 }
 
-/* ---------- VIDEO ---------- */
-
+/* -------- VIDEO -------- */
 .video{
+  width:100%;
+  aspect-ratio:9/16;
   border-radius:14px;
   overflow:hidden;
   background:black;
@@ -99,38 +100,27 @@ nav ul a:hover{
   border:0;
 }
 
-/* Horizontal default (unused here but consistent with others) */
-.video{
-  aspect-ratio:16 / 9;
-}
-
-/* ✅ Vertical override for Instagram-style videos */
-.video.vertical{
-  aspect-ratio:9 / 16;
-  max-width:360px;
-}
-
-/* ---------- TEXT ---------- */
-
+/* -------- TEXT -------- */
 .info h1{
-  margin:0 0 28px;
   font-size:48px;
+  margin:0 0 28px 0;
   line-height:1.05;
+  font-weight:700;
 }
 
 .info p{
-  max-width:520px;
+  color:var(--text);
+  font-size:16px;
   line-height:1.65;
+  max-width:520px;
   margin-bottom:14px;
 }
 
-/* ---------- PROJECT NAV (ARROWS) ---------- */
-
-.project-nav{
+/* -------- NAVIGATION -------- */
+.nav-projects{
   margin-top:72px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
 .nav-link{
@@ -138,20 +128,21 @@ nav ul a:hover{
   align-items:center;
   gap:12px;
   text-decoration:none;
-  color:var(--mint);
-  transition:.2s ease;
+  color:var(--next);
+  transition:.18s ease;
 }
 
 .nav-link.next:hover{
   transform:translateX(6px);
 }
+
 .nav-link.prev:hover{
   transform:translateX(-6px);
 }
 
 .nav-label{
-  text-transform:uppercase;
   font-size:13px;
+  text-transform:uppercase;
   letter-spacing:.8px;
 }
 
@@ -160,9 +151,12 @@ nav ul a:hover{
   line-height:1;
 }
 
-/* ---------- MOBILE ---------- */
-
+/* -------- MOBILE -------- */
 @media(max-width:900px){
+
+  nav .name{
+    font-size:18px;
+  }
 
   .project{
     grid-template-columns:1fr;
@@ -170,8 +164,8 @@ nav ul a:hover{
     gap:28px;
   }
 
-  .video.vertical{
-    max-width:320px;
+  .video{
+    max-width:360px;
     margin:auto;
   }
 
@@ -183,17 +177,18 @@ nav ul a:hover{
     font-size:36px;
   }
 
+  .nav-projects{
+    justify-content:space-between;
+  }
 }
 
-/* ---------- FOOTER ---------- */
-
+/* -------- FOOTER -------- */
 footer{
   margin-top:80px;
   text-align:center;
   color:var(--muted);
   font-size:13px;
 }
-
 </style>
 </head>
 
@@ -204,7 +199,7 @@ footer{
 <!-- NAV -->
 <nav>
   <div class="name">
-    <a href="index.html">Carolina Cardoso</a>
+    <a href="index.html">Carolina&nbsp;Cardoso</a>
   </div>
 
   <ul>
@@ -217,41 +212,40 @@ footer{
 <div class="project">
 
   <!-- VIDEO -->
-  <div class="video vertical">
+  <div class="video">
     <iframe 
-      src="https://player.vimeo.com/video/1144782772" 
+      src="https://player.vimeo.com/video/YOUR_PROJECT2_VIDEO_ID?title=0&byline=0&portrait=0"
+      allow="autoplay; fullscreen; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 
   <!-- TEXT -->
   <div class="info">
-
     <h1>Social Media Video</h1>
 
     <p>
-      For this project I produced and edited a vertical, social-first video built
-      for mobile viewing and distribution on Instagram and TikTok.
+      For this project I produced and edited vertical social-first video
+      designed specifically for mobile-first audiences on Instagram and TikTok.
     </p>
 
     <p>
-      I developed the concept, filmed, edited, and adapted the final format to
-      meet both creative and platform-specific requirements.
+      My role covered creative ideation, filming, editing, formatting, and
+      platform optimisation while maintaining visual clarity and narrative flow.
     </p>
-
   </div>
 
 </div>
 
-<!-- NAVIGATION ARROWS -->
-<div class="project-nav">
+<!-- PROJECT NAV -->
+<div class="nav-projects">
 
-  <a href="project1.html" class="nav-link prev">
+  <a class="nav-link prev" href="project1.html">
     <div class="nav-arrow">←</div>
     <div class="nav-label">Previous project</div>
   </a>
 
-  <a href="project3.html" class="nav-link next">
+  <a class="nav-link next" href="project3.html">
     <div class="nav-label">Next project</div>
     <div class="nav-arrow">→</div>
   </a>
