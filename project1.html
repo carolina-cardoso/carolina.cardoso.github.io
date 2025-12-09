@@ -46,6 +46,7 @@ nav{
 
 nav .name{
   font-weight:700;
+  color:var(--next); /* ✅ Mint green */
 }
 
 nav ul{
@@ -70,7 +71,7 @@ nav a:hover{ color:var(--accent); }
   grid-template-columns:380px 1fr;
   gap:48px;
   align-items:start;
-  margin-top:96px;     /* ✅ desktop extra vertical spacing */
+  margin-top:96px;
 }
 
 /* -------- VIDEO -------- */
@@ -109,33 +110,38 @@ nav a:hover{ color:var(--accent); }
   margin-top:64px;
   display:flex;
   justify-content:flex-end;
+}
+
+/* ✅ Whole block clickable */
+.next-link{
+  display:flex;
   align-items:center;
   gap:12px;
+  text-decoration:none;
+  color:var(--next);
+  transition:.18s ease;
+}
+
+.next-link:hover{
+  transform:translateX(6px);
 }
 
 .next-label{
   font-size:13px;
-  color:var(--next);
   text-transform:uppercase;
   letter-spacing:.8px;
 }
 
 .next-arrow{
   font-size:34px;
-  color:var(--next);
-  text-decoration:none;
-  transition:.18s ease;
-}
-
-.next-arrow:hover{
-  transform:translateX(6px);
+  line-height:1;
 }
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
   .project{
     grid-template-columns:1fr;
-    margin-top:24px;   /* ✅ keeps mobile layout tight like before */
+    margin-top:24px;
   }
 
   .video{
@@ -172,7 +178,7 @@ footer{
 
   <!-- TOP NAV -->
   <nav>
-    <div class="name">carolina.cardoso</div>
+    <div class="name">Carolina Cardoso</div>
     <ul>
       <li><a href="index.html">Videos</a></li>
       <li><a href="about.html">About</a></li>
@@ -209,10 +215,12 @@ footer{
 
   </div>
 
-  <!-- NEXT LINK -->
+  <!-- NEXT LINK (clickable text + arrow) -->
   <div class="next-project">
-    <div class="next-label">Next</div>
-    <a class="next-arrow" href="project2.html">→</a>
+    <a class="next-link" href="project2.html">
+      <div class="next-label">Next project</div>
+      <div class="next-arrow">→</div>
+    </a>
   </div>
 
   <!-- FOOTER -->
