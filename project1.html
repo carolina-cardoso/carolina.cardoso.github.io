@@ -33,7 +33,7 @@ body{
 .wrapper{
   max-width:1100px;
   margin:auto;
-  padding:60px 20px 60px; /* increased top padding for more space */
+  padding:60px 20px 60px;
 }
 
 /* ---------- NAV ---------- */
@@ -64,25 +64,13 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
-/* -------- BACK LINK -------- */
-.back{
-  margin-bottom:18px;
-}
-
-.back a{
-  text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
-}
-.back a:hover{ color:white; }
-
 /* -------- LAYOUT -------- */
 .project{
   display:grid;
   grid-template-columns:380px 1fr;
   gap:48px;
   align-items:start;
-  margin-top:18px; /* extra space between top and video */
+  margin-top:96px;     /* ✅ desktop extra vertical spacing */
 }
 
 /* -------- VIDEO -------- */
@@ -109,14 +97,14 @@ nav a:hover{ color:var(--accent); }
 }
 
 .info p{
-  color:var(--text); /* now white */
+  color:var(--text);
   font-size:16px;
   line-height:1.6;
   max-width:520px;
   margin-bottom:14px;
 }
 
-/* -------- NEXT PROJECT (label + arrow) -------- */
+/* -------- NEXT PROJECT -------- */
 .next-project{
   margin-top:64px;
   display:flex;
@@ -129,22 +117,25 @@ nav a:hover{ color:var(--accent); }
   font-size:13px;
   color:var(--next);
   text-transform:uppercase;
-  letter-spacing:0.8px;
+  letter-spacing:.8px;
 }
 
 .next-arrow{
   font-size:34px;
   color:var(--next);
   text-decoration:none;
-  transition:transform .18s ease, color .18s;
+  transition:.18s ease;
 }
-.next-arrow:hover{ transform:translateX(6px); }
+
+.next-arrow:hover{
+  transform:translateX(6px);
+}
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
-  .wrapper{ padding-top:40px; }
   .project{
     grid-template-columns:1fr;
+    margin-top:24px;   /* ✅ keeps mobile layout tight like before */
   }
 
   .video{
@@ -160,7 +151,9 @@ nav a:hover{ color:var(--accent); }
     font-size:36px;
   }
 
-  .next-project{ justify-content:center; }
+  .next-project{
+    justify-content:center;
+  }
 }
 
 /* -------- FOOTER -------- */
@@ -177,7 +170,7 @@ footer{
 
 <div class="wrapper">
 
-  <!-- TOP NAV (site-wide) -->
+  <!-- TOP NAV -->
   <nav>
     <div class="name">carolina.cardoso</div>
     <ul>
@@ -186,13 +179,10 @@ footer{
     </ul>
   </nav>
 
-  <div class="back">
-    <a href="index.html">← Back to portfolio</a>
-  </div>
-
+  <!-- PROJECT -->
   <div class="project">
 
-    <!-- VIDEO (LEFT) -->
+    <!-- VIDEO -->
     <div class="video">
       <iframe
         src="https://player.vimeo.com/video/1144782772?h=0"
@@ -201,7 +191,7 @@ footer{
       </iframe>
     </div>
 
-    <!-- TEXT (RIGHT) -->
+    <!-- TEXT -->
     <div class="info">
       <h1>Social Media Video</h1>
 
@@ -219,12 +209,13 @@ footer{
 
   </div>
 
-  <!-- NEXT PROJECT (label above arrow) -->
+  <!-- NEXT LINK -->
   <div class="next-project">
     <div class="next-label">Next</div>
-    <a class="next-arrow" href="project2.html" aria-label="Next project">→</a>
+    <a class="next-arrow" href="project2.html">→</a>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     Copyright © 2025 Carolina Cardoso. All rights reserved.
   </footer>
