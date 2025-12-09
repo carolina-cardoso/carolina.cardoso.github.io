@@ -5,12 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <title>Social Media Video — Carolina Cardoso</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
 
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  
 <!-- Inter Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +41,23 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  margin-bottom:28px;
+  align-items:flex-start;
+  margin-bottom:32px;
 }
 
 nav .name{
   font-weight:700;
-  color:var(--next); /* ✅ Mint green */
+  font-size:20px;                  /* BIGGER impact */
+  letter-spacing:.4px;
+}
+
+nav .name a{
+  text-decoration:none;
+  color:var(--next);               /* mint */
+}
+
+nav .name a:hover{
+  opacity:.8;
 }
 
 nav ul{
@@ -58,7 +65,7 @@ nav ul{
   display:flex;
   gap:20px;
   padding:0;
-  margin:0;
+  margin:3px 0 0 0;
 }
 
 nav a{
@@ -73,9 +80,9 @@ nav a:hover{ color:var(--accent); }
 .project{
   display:grid;
   grid-template-columns:380px 1fr;
-  gap:48px;
+  gap:56px;                        /* MORE space between video & text */
   align-items:start;
-  margin-top:96px;
+  margin-top:120px;               /* PUSH content down on desktop */
 }
 
 /* -------- VIDEO -------- */
@@ -96,7 +103,7 @@ nav a:hover{ color:var(--accent); }
 /* -------- TEXT -------- */
 .info h1{
   font-size:48px;
-  margin:0 0 24px 0;
+  margin:0 0 28px 0;
   line-height:1.05;
   font-weight:700;
 }
@@ -104,19 +111,18 @@ nav a:hover{ color:var(--accent); }
 .info p{
   color:var(--text);
   font-size:16px;
-  line-height:1.6;
+  line-height:1.65;
   max-width:520px;
   margin-bottom:14px;
 }
 
 /* -------- NEXT PROJECT -------- */
 .next-project{
-  margin-top:64px;
+  margin-top:72px;
   display:flex;
   justify-content:flex-end;
 }
 
-/* ✅ Whole block clickable */
 .next-link{
   display:flex;
   align-items:center;
@@ -143,9 +149,15 @@ nav a:hover{ color:var(--accent); }
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
+
+  nav .name{
+    font-size:18px;
+  }
+
   .project{
     grid-template-columns:1fr;
-    margin-top:24px;
+    margin-top:28px;
+    gap:28px;
   }
 
   .video{
@@ -180,57 +192,59 @@ footer{
 
 <div class="wrapper">
 
-  <!-- TOP NAV -->
-  <nav>
-    <div class="name">Carolina Cardoso</div>
-    <ul>
-      <li><a href="index.html">Videos</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-
-  <!-- PROJECT -->
-  <div class="project">
-
-    <!-- VIDEO -->
-    <div class="video">
-      <iframe
-        src="https://player.vimeo.com/video/1144782772?h=0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- TEXT -->
-    <div class="info">
-      <h1>Social Media Video</h1>
-
-      <p>
-        For this project I was responsible for producing and editing vertical
-        social-first video content tailored for Instagram and TikTok audiences.
-      </p>
-
-      <p>
-        My role included concept development, scripting, filming, mobile-first
-        editing, and adapting the final piece to platform-specific formats
-        while maintaining clear storytelling and visual cohesion.
-      </p>
-    </div>
-
+<!-- NAV -->
+<nav>
+  <div class="name">
+    <a href="index.html">Carolina&nbsp;Cardoso</a>
   </div>
 
-  <!-- NEXT LINK (clickable text + arrow) -->
-  <div class="next-project">
-    <a class="next-link" href="project2.html">
-      <div class="next-label">Next project</div>
-      <div class="next-arrow">→</div>
-    </a>
+  <ul>
+    <li><a href="index.html">Videos</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- PROJECT -->
+<div class="project">
+
+  <!-- VIDEO -->
+  <div class="video">
+    <iframe
+      src="https://player.vimeo.com/video/1144782772?title=0&byline=0&portrait=0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    Copyright © 2025 Carolina Cardoso. All rights reserved.
-  </footer>
+  <!-- TEXT -->
+  <div class="info">
+    <h1>Social Media Video</h1>
+
+    <p>
+      For this project I was responsible for producing and editing vertical
+      social-first video content tailored for Instagram and TikTok audiences.
+    </p>
+
+    <p>
+      My role included concept development, scripting, filming, mobile-first
+      editing, and adapting the final piece to platform-specific formats
+      while maintaining clear storytelling and visual cohesion.
+    </p>
+  </div>
+
+</div>
+
+<!-- NEXT PROJECT -->
+<div class="next-project">
+  <a class="next-link" href="project2.html">
+    <div class="next-label">Next project</div>
+    <div class="next-arrow">→</div>
+  </a>
+</div>
+
+<footer>
+Copyright © 2025 Carolina Cardoso. All rights reserved.
+</footer>
 
 </div>
 
