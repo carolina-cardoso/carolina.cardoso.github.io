@@ -6,7 +6,7 @@
 
 <title>Social Media Video — Carolina Cardoso</title>
 <link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Project by Carolina Cardoso — YouTube and Web Video" />
+<meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
 
 <!-- Inter Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,19 +76,18 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
-/* -------- PROJECT -------- */
+/* -------- LAYOUT -------- */
 .project{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  margin-top:60px;
-  gap:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr; /* half-screen for video, half for text */
+  gap:56px;
+  align-items:start;
+  margin-top:120px;
 }
 
 /* -------- VIDEO -------- */
 .video{
-  width:100vw;           /* full viewport width */
-  max-width:1600px;      /* optional max width */
+  width:100%;
   aspect-ratio:16/9;
   border-radius:14px;
   overflow:hidden;
@@ -102,11 +101,6 @@ nav a:hover{ color:var(--accent); }
 }
 
 /* -------- TEXT -------- */
-.info{
-  max-width:800px;
-  text-align:center;
-}
-
 .info h1{
   font-size:48px;
   margin:0 0 28px 0;
@@ -118,6 +112,7 @@ nav a:hover{ color:var(--accent); }
   color:var(--text);
   font-size:16px;
   line-height:1.65;
+  max-width:520px;
   margin-bottom:14px;
 }
 
@@ -125,7 +120,7 @@ nav a:hover{ color:var(--accent); }
 .next-project{
   margin-top:72px;
   display:flex;
-  justify-content:center;
+  justify-content:flex-end;
 }
 
 .next-link{
@@ -152,27 +147,43 @@ nav a:hover{ color:var(--accent); }
   line-height:1;
 }
 
+/* -------- MOBILE -------- */
+@media(max-width:900px){
+
+  nav .name{
+    font-size:18px;
+  }
+
+  .project{
+    grid-template-columns:1fr; /* stack video and text on mobile */
+    margin-top:28px;
+    gap:28px;
+  }
+
+  .video{
+    max-width:100%;
+    margin:auto;
+  }
+
+  .info{
+    text-align:center;
+  }
+
+  .info h1{
+    font-size:36px;
+  }
+
+  .next-project{
+    justify-content:center;
+  }
+}
+
 /* -------- FOOTER -------- */
 footer{
   margin-top:80px;
   text-align:center;
   color:var(--muted);
   font-size:13px;
-}
-
-/* -------- MOBILE -------- */
-@media(max-width:900px){
-  .info h1{
-    font-size:36px;
-  }
-
-  .project{
-    gap:28px;
-  }
-
-  .video{
-    width:100%;
-  }
 }
 </style>
 </head>
@@ -207,11 +218,11 @@ footer{
 
   <!-- TEXT -->
   <div class="info">
-    <h1>YouTube and Web Video</h1>
+    <h1>Social Media Video</h1>
 
     <p>
       For this project I was responsible for producing and editing horizontal
-      social-first video content for YouTube and social platforms.
+      social-first video content tailored for YouTube and other platforms.
     </p>
 
     <p>
