@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Social Media Video — Carolina Cardoso</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
+
+<!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#000000;
+  --text:#ffffff;
+  --muted:#aab2c3;
+  --accent:#7dd3fc;
+  --next:#cfffb6;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter', sans-serif;
+}
+
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px 60px;
+}
+
+/* ---------- NAV ---------- */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:32px;
+}
+
+nav .name{
+  font-weight:700;
+  font-size:20px;                  /* BIGGER impact */
+  letter-spacing:.4px;
+}
+
+nav .name a{
+  text-decoration:none;
+  color:var(--next);               /* mint */
+}
+
+nav .name a:hover{
+  opacity:.8;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  padding:0;
+  margin:3px 0 0 0;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{ color:var(--accent); }
+
+/* -------- LAYOUT -------- */
+.project{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:56px;                        /* MORE space between video & text */
+  align-items:start;
+  margin-top:120px;               /* PUSH content down on desktop */
+}
+
+/* -------- VIDEO -------- */
+.video{
+  width:100%;
+  aspect-ratio:9/16;
+  border-radius:14px;
+  overflow:hidden;
+  background:black;
+}
+
+.video iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* -------- TEXT -------- */
+.info h1{
+  font-size:48px;
+  margin:0 0 28px 0;
+  line-height:1.05;
+  font-weight:700;
+}
+
+.info p{
+  color:var(--text);
+  font-size:16px;
+  line-height:1.65;
+  max-width:520px;
+  margin-bottom:14px;
+}
+
+/* -------- NEXT PROJECT -------- */
+.next-project{
+  margin-top:72px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.next-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--next);
+  transition:.18s ease;
+}
+
+.next-link:hover{
+  transform:translateX(6px);
+}
+
+.next-label{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.next-arrow{
+  font-size:34px;
+  line-height:1;
+}
+
+/* -------- MOBILE -------- */
+@media(max-width:900px){
+
+  nav .name{
+    font-size:18px;
+  }
+
+  .project{
+    grid-template-columns:1fr;
+    margin-top:28px;
+    gap:28px;
+  }
+
+  .video{
+    max-width:360px;
+    margin:auto;
+  }
+
+  .info{
+    text-align:center;
+  }
+
+  .info h1{
+    font-size:36px;
+  }
+
+  .next-project{
+    justify-content:center;
+  }
+}
+
+/* -------- FOOTER -------- */
+footer{
+  margin-top:80px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- NAV -->
+<nav>
+  <div class="name">
+    <a href="index.html">Carolina&nbsp;Cardoso</a>
+  </div>
+
+  <ul>
+    <li><a href="index.html">Videos</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- PROJECT -->
+<div class="project">
+
+  <!-- VIDEO -->
+  <div class="video">
+    <iframe
+      src="https://vimeo.com/1144789359?title=0&byline=0&portrait=0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- TEXT -->
+  <div class="info">
+    <h1>Social Media Video</h1>
+
+    <p>
+      For this project I was responsible for producing and editing vertical
+      social-first video content tailored for Instagram and TikTok audiences.
+    </p>
+
+    <p>
+      My role included concept development, scripting, filming, mobile-first
+      editing, and adapting the final piece to platform-specific formats
+      while maintaining clear storytelling and visual cohesion.
+    </p>
+  </div>
+
+</div>
+
+<!-- NEXT PROJECT -->
+<div class="next-project">
+  <a class="next-link" href="project3.html">
+    <div class="next-label">Next project</div>
+    <div class="next-arrow">→</div>
+  </a>
+</div>
+
+<footer>
+Copyright © 2025 Carolina Cardoso. All rights reserved.
+</footer>
+
+</div>
+
+</body>
+</html>
