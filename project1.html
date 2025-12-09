@@ -18,6 +18,7 @@
   --text:#ffffff;
   --muted:#aab2c3;
   --accent:#7dd3fc;
+  --next:#cfffb6;
 }
 
 *{ box-sizing:border-box; }
@@ -32,12 +33,40 @@ body{
 .wrapper{
   max-width:1100px;
   margin:auto;
-  padding:40px 20px 60px;
+  padding:60px 20px 60px; /* increased top padding for more space */
 }
+
+/* ---------- NAV ---------- */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:28px;
+}
+
+nav .name{
+  font-weight:700;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  padding:0;
+  margin:0;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{ color:var(--accent); }
 
 /* -------- BACK LINK -------- */
 .back{
-  margin-bottom:32px;
+  margin-bottom:18px;
 }
 
 .back a{
@@ -52,7 +81,8 @@ body{
   display:grid;
   grid-template-columns:380px 1fr;
   gap:48px;
-  align-items:center;
+  align-items:start;
+  margin-top:18px; /* extra space between top and video */
 }
 
 /* -------- VIDEO -------- */
@@ -74,38 +104,45 @@ body{
 .info h1{
   font-size:48px;
   margin:0 0 24px 0;
-  line-height:1.1;
+  line-height:1.05;
   font-weight:700;
 }
 
 .info p{
-  color:var(--muted);
+  color:var(--text); /* now white */
   font-size:16px;
   line-height:1.6;
   max-width:520px;
+  margin-bottom:14px;
 }
 
-/* -------- NEXT PROJECT -------- */
+/* -------- NEXT PROJECT (label + arrow) -------- */
 .next-project{
   margin-top:64px;
   display:flex;
   justify-content:flex-end;
+  align-items:center;
+  gap:12px;
 }
 
-.next-project a{
-  font-size:32px;
-  color:var(--text);
+.next-label{
+  font-size:13px;
+  color:var(--next);
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+}
+
+.next-arrow{
+  font-size:34px;
+  color:var(--next);
   text-decoration:none;
-  transition:.2s ease;
+  transition:transform .18s ease, color .18s;
 }
-
-.next-project a:hover{
-  color:var(--accent);
-  transform:translateX(4px);
-}
+.next-arrow:hover{ transform:translateX(6px); }
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
+  .wrapper{ padding-top:40px; }
   .project{
     grid-template-columns:1fr;
   }
@@ -123,9 +160,7 @@ body{
     font-size:36px;
   }
 
-  .next-project{
-    justify-content:center;
-  }
+  .next-project{ justify-content:center; }
 }
 
 /* -------- FOOTER -------- */
@@ -142,47 +177,57 @@ footer{
 
 <div class="wrapper">
 
-<div class="back">
-  <a href="index.html">← Back to portfolio</a>
-</div>
+  <!-- TOP NAV (site-wide) -->
+  <nav>
+    <div class="name">carolina.cardoso</div>
+    <ul>
+      <li><a href="index.html">Videos</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
 
-<div class="project">
-
-  <!-- VIDEO (LEFT) -->
-  <div class="video">
-    <iframe
-      src="https://player.vimeo.com/video/1144782772?h=0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <div class="back">
+    <a href="index.html">← Back to portfolio</a>
   </div>
 
-  <!-- TEXT (RIGHT) -->
-  <div class="info">
-    <h1>Social Media Video</h1>
+  <div class="project">
 
-    <p>
-      For this project I was responsible for producing and editing vertical
-      social-first video content tailored for Instagram and TikTok audiences.
-    </p>
+    <!-- VIDEO (LEFT) -->
+    <div class="video">
+      <iframe
+        src="https://player.vimeo.com/video/1144782772?h=0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-    <p>
-      My role included concept development, scripting, filming, mobile-first
-      editing, and adapting the final piece to platform-specific formats
-      while maintaining clear storytelling and visual cohesion.
-    </p>
+    <!-- TEXT (RIGHT) -->
+    <div class="info">
+      <h1>Social Media Video</h1>
+
+      <p>
+        For this project I was responsible for producing and editing vertical
+        social-first video content tailored for Instagram and TikTok audiences.
+      </p>
+
+      <p>
+        My role included concept development, scripting, filming, mobile-first
+        editing, and adapting the final piece to platform-specific formats
+        while maintaining clear storytelling and visual cohesion.
+      </p>
+    </div>
+
   </div>
 
-</div>
+  <!-- NEXT PROJECT (label above arrow) -->
+  <div class="next-project">
+    <div class="next-label">Next</div>
+    <a class="next-arrow" href="project2.html" aria-label="Next project">→</a>
+  </div>
 
-<!-- NEXT PROJECT ARROW -->
-<div class="next-project">
-  <a href="project2.html" aria-label="Next project">→</a>
-</div>
-
-<footer>
-Copyright © 2025 Carolina Cardoso. All rights reserved.
-</footer>
+  <footer>
+    Copyright © 2025 Carolina Cardoso. All rights reserved.
+  </footer>
 
 </div>
 
