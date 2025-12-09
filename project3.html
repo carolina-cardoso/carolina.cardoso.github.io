@@ -6,7 +6,7 @@
 
 <title>Social Media Video — Carolina Cardoso</title>
 <link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Project by Carolina Cardoso — Motion Design Video" />
+<meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
 
 <!-- Inter Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,18 +47,16 @@ nav{
 
 nav .name{
   font-weight:700;
-  font-size:20px;                  /* BIGGER impact */
+  font-size:20px;
   letter-spacing:.4px;
 }
 
 nav .name a{
   text-decoration:none;
-  color:var(--next);               /* mint */
+  color:var(--next);
 }
 
-nav .name a:hover{
-  opacity:.8;
-}
+nav .name a:hover{ opacity:.8; }
 
 nav ul{
   list-style:none;
@@ -76,19 +74,20 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
+
 /* -------- LAYOUT -------- */
 .project{
   display:grid;
-  grid-template-columns:380px 1fr;
-  gap:56px;                        /* MORE space between video & text */
+  grid-template-columns:1fr 1fr;
+  gap:56px;
   align-items:start;
-  margin-top:120px;               /* PUSH content down on desktop */
+  margin-top:120px;
 }
 
 /* -------- VIDEO -------- */
 .video{
   width:100%;
-  aspect-ratio:9/16;
+  aspect-ratio:16/9;
   border-radius:14px;
   overflow:hidden;
   background:black;
@@ -116,14 +115,16 @@ nav a:hover{ color:var(--accent); }
   margin-bottom:14px;
 }
 
-/* -------- NEXT PROJECT -------- */
-.next-project{
+
+/* -------- PROJECT NAV -------- */
+.project-nav{
   margin-top:72px;
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.next-link{
+.nav-link{
   display:flex;
   align-items:center;
   gap:12px;
@@ -132,20 +133,25 @@ nav a:hover{ color:var(--accent); }
   transition:.18s ease;
 }
 
-.next-link:hover{
+.nav-link:hover{
   transform:translateX(6px);
 }
 
-.next-label{
+.nav-link.prev:hover{
+  transform:translateX(-6px);
+}
+
+.nav-label{
   font-size:13px;
   text-transform:uppercase;
   letter-spacing:.8px;
 }
 
-.next-arrow{
+.nav-arrow{
   font-size:34px;
   line-height:1;
 }
+
 
 /* -------- MOBILE -------- */
 @media(max-width:900px){
@@ -161,7 +167,7 @@ nav a:hover{ color:var(--accent); }
   }
 
   .video{
-    max-width:360px;
+    max-width:100%;
     margin:auto;
   }
 
@@ -173,10 +179,12 @@ nav a:hover{ color:var(--accent); }
     font-size:36px;
   }
 
-  .next-project{
-    justify-content:center;
+  .project-nav{
+    justify-content:space-between;
+    gap:48px;
   }
 }
+
 
 /* -------- FOOTER -------- */
 footer{
@@ -204,43 +212,53 @@ footer{
   </ul>
 </nav>
 
+
 <!-- PROJECT -->
 <div class="project">
 
   <!-- VIDEO -->
   <div class="video">
-    <iframe
-      src="https://player.vimeo.com/video/1144791347?title=0&byline=0&portrait=0"
-      allow="autoplay; fullscreen; picture-in-picture"
+    <!-- Replace this URL with your real Project 2 embed -->
+    <iframe src="https://player.vimeo.com/video/1144791347"
       allowfullscreen>
     </iframe>
   </div>
 
   <!-- TEXT -->
   <div class="info">
-    <h1>Motion Design Video</h1>
+    <h1>Social Media Video</h1>
 
     <p>
-      For this project I was responsible for producing and editing vertical
-      social-first video content tailored for Instagram and TikTok audiences.
+      For this project I produced and edited a short-form vertical video designed
+      for social media distribution, focusing on fast pacing and impactful storytelling.
     </p>
 
     <p>
-      My role included concept development, scripting, filming, mobile-first
-      editing, and adapting the final piece to platform-specific formats
-      while maintaining clear storytelling and visual cohesion.
+      I was responsible for the full production flow — creative concept, filming,
+      post-production editing, and formatting for platform-specific delivery.
     </p>
   </div>
 
 </div>
 
-<!-- NEXT PROJECT -->
-<div class="next-project">
-  <a class="next-link" href="project4.html">
-    <div class="next-label">Next project</div>
-    <div class="next-arrow">→</div>
+
+<!-- PROJECT NAV -->
+<div class="project-nav">
+
+  <!-- PREVIOUS -->
+  <a class="nav-link prev" href="project2.html">
+    <div class="nav-arrow">←</div>
+    <div class="nav-label">Previous project</div>
   </a>
+
+  <!-- NEXT -->
+  <a class="nav-link next" href="project4.html">
+    <div class="nav-label">Next project</div>
+    <div class="nav-arrow">→</div>
+  </a>
+
 </div>
+
 
 <footer>
 Copyright © 2025 Carolina Cardoso. All rights reserved.
