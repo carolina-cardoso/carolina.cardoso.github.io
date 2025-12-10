@@ -41,12 +41,13 @@ body{
 }
 
 /* ---------- NAV ---------- */
-nav{
-  display:flex;
-  justify-content:flex-end; /* menu no canto superior direito */
-  align-items:center;
-  margin-bottom:40px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
 }
+
 
 nav ul{
   list-style:none;
@@ -213,11 +214,13 @@ footer{
 
 <!-- ---------- NAV ---------- -->
 <nav>
+  <div class="name"></div> <!-- placeholder to match spacing -->
   <ul>
     <li><a href="index.html">Videos</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
 </nav>
+
 
 <!-- ---------- NOME CENTRAL ---------- -->
 <div class="header-name">Carolina Cardoso</div>
@@ -286,5 +289,6 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
 
 
