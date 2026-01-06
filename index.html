@@ -22,6 +22,7 @@
   --muted:#aab2c3;
   --accent:#7dd3fc;
   --next:#cfffb6; /* verde usado no next project */
+  --brand:rgba(255,120,80,0.22); /* warm red–orange */
 }
 *{box-sizing:border-box}
 
@@ -189,13 +190,20 @@ nav a:hover{
   
 /* ---------- SECTIONS ---------- */
 .section{
-  margin-bottom:64px;
+  margin-bottom:96px; /* more breathing room */
 }
 
+
 .section h2{
-  margin-bottom:12px;
-  font-size:18px;
+  margin-bottom:16px;
+  font-size:20px;                 /* slightly bigger */
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--brand);
+  margin-left:50px;               /* aligns with first thumbnail, not arrow */
 }
+
 
 /* ---------- FOOTER ---------- */
 footer{
@@ -207,9 +215,17 @@ footer{
 
 /* ---------- RESPONSIVO ---------- */
 @media(max-width:900px){
-  .header-name{
-    font-size:28px;
+  .section h2{
+    margin-left:0;
+    text-align:left;
+    padding-left:6px; /* subtle alignment */
+    font-size:18px;
   }
+
+  .section{
+    margin-bottom:72px;
+  }
+}
 
   .header-subtitle{
     font-size:14px;
@@ -238,6 +254,7 @@ footer{
     width:250px;
     height:140px;
   }
+  
 }
 </style>
 </head>
@@ -324,6 +341,7 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
 
 
 
